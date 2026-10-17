@@ -27,8 +27,3 @@ Open it through the server, **not** by double-clicking `index.html` (browsers bl
 ## Deploy
 - **Render:** New → Web Service from this repo (`render.yaml` is included). Add `MINIMOTH_API_KEY` in the dashboard.
 - **GitHub Pages / static hosts will not work**, because the OTP proxy needs a running server.
-
-## Before you submit
-- Replace the placeholder domain `https://ledgerloop.example` in `index.html`, `llms.txt`, `robots.txt` and `sitemap.xml` with your deployed URL.
-- Keep the demo notice visible.
-- Never commit a real key. Rotate the sandbox key after the event if it was shared.
