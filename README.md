@@ -1,4 +1,4 @@
-# LedgerLoop — PS 04 “Get Cited: Build the Most AI-Visible Page”
+# LedgerLoop
 
 > **Competition demonstration.** LedgerLoop is a fictional business created for the PS 04 challenge (Case 2). It is not a real company or product. Do not make any payment shown on the page.
 
