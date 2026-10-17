@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LedgerLoop – GST invoicing, UPI payment links and expense tracking for freelancers in India</title>
+<meta name="description" content="LedgerLoop is invoicing and payment-tracking software for freelancers and very small agencies in India: GST-compliant invoices, UPI payment links, automatic reminders and expense tracking. Free plan, ₹399 and ₹899 per month. No multi-currency or payroll.">
+<link rel="canonical" href="https://ledgerloop.example/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://ledgerloop.example/#org","name":"LedgerLoop","url":"https://ledgerloop.example/","foundingDate":"2023","numberOfEmployees":{"@type":"QuantitativeValue","value":4},"address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressCountry":"IN"},"description":"Invoicing and payment-tracking software for freelancers and very small agencies in India. Fictional business created for a competition demonstration."},
+{"@type":"SoftwareApplication","@id":"https://ledgerloop.example/#app","name":"LedgerLoop","applicationCategory":"BusinessApplication","operatingSystem":"Web","audience":{"@type":"Audience","audienceType":"Freelancers and very small agencies in India"},"featureList":["GST-compliant invoices","UPI payment links","Automatic payment reminders","Expense tracking"],"publisher":{"@id":"https://ledgerloop.example/#org"},
+"offers":[{"@type":"Offer","name":"Free plan","price":"0","priceCurrency":"INR"},{"@type":"Offer","name":"₹399 plan","price":"399","priceCurrency":"INR","priceSpecification":{"@type":"UnitPriceSpecification","price":"399","priceCurrency":"INR","billingDuration":"P1M"}},{"@type":"Offer","name":"₹899 plan","price":"899","priceCurrency":"INR","priceSpecification":{"@type":"UnitPriceSpecification","price":"899","priceCurrency":"INR","billingDuration":"P1M"}}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does LedgerLoop cost?","acceptedAnswer":{"@type":"Answer","text":"LedgerLoop has exactly three plans: a free plan, ₹399 per month and ₹899 per month. No other plan or price is current."}},
+{"@type":"Question","name":"Does LedgerLoop support multi-currency invoicing?","acceptedAnswer":{"@type":"Answer","text":"No. LedgerLoop does not offer multi-currency invoicing. Invoices are in Indian rupees (INR)."}},
+{"@type":"Question","name":"Does LedgerLoop have UPI payment links?","acceptedAnswer":{"@type":"Answer","text":"Yes. UPI payment links are a core feature on LedgerLoop."}},
+{"@type":"Question","name":"Does LedgerLoop do payroll?","acceptedAnswer":{"@type":"Answer","text":"No. LedgerLoop does not offer payroll."}},
+{"@type":"Question","name":"How do I sign in to LedgerLoop?","acceptedAnswer":{"@type":"Answer","text":"With your mobile number. LedgerLoop sends a 6-digit one-time code by WhatsApp, falling back to SMS. There is no password and no password reset."}},
+{"@type":"Question","name":"Where is LedgerLoop based and who is it for?","acceptedAnswer":{"@type":"Answer","text":"LedgerLoop is based in Hyderabad, launched in 2023 and has a four-person team. It is built for freelancers and very small agencies in India."}}]}
+]}
+</script>
+<style>
+:root{--lav:#ECE8FB;--vio:#6C3AF5;--ink:#1F1235;--lime:#DBFF5C;--paper:#FAF8F5;--mut:#5c5675;--hd:"Space Grotesk","Helvetica Neue",Arial,sans-serif;--bd:Inter,system-ui,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--bd)}
+h1,h2,h3{font-family:var(--hd);font-weight:500;letter-spacing:-.02em;line-height:1.1;margin:0}
+a{color:var(--vio)}p{margin:0 0 12px}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--vio);outline-offset:2px}
+.demo{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:9px 16px}
+.demo b{color:var(--lime)}
+header{position:sticky;top:0;background:rgba(250,248,245,.94);backdrop-filter:blur(8px);z-index:5;border-bottom:1px solid #e8e4ef}
+header .w{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font:600 20px var(--hd);text-decoration:none;color:var(--ink)}.logo i{color:var(--vio);font-style:normal}
+nav{display:flex;gap:22px;font-size:14px;align-items:center;flex-wrap:wrap}nav a{color:var(--ink);text-decoration:none}
+.btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;border:1px solid transparent;border-radius:6px;padding:14px 22px;font:500 14px/1 var(--bd);cursor:pointer;text-decoration:none;background:var(--vio);color:#fff;transition:transform .15s,box-shadow .15s}
+.btn::after{content:"→";transition:transform .15s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(108,58,245,.3)}.btn:hover::after{transform:translateX(4px)}
+.btn.s{background:#fff;color:var(--ink);border-color:#d9d3ee}.btn.l{background:var(--lime);color:var(--ink)}.btn.l:hover{box-shadow:0 8px 20px rgba(150,190,0,.35)}.btn.s:hover{box-shadow:0 8px 20px rgba(31,18,53,.12)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hg{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.vis{position:relative;height:440px}.ring{position:absolute;right:-50px;top:10px;width:380px;height:380px;border-radius:50%;border:44px solid #d9ccfb}
+.dc{position:absolute;left:0;top:10px;width:290px;background:var(--ink);color:#fff;border-radius:12px;padding:20px;animation:fl 6s ease-in-out infinite}
+.dc small{color:#b9afd6;font-size:12px;display:block}.dc .n{font:500 38px var(--hd);display:block;margin:4px 0 14px;color:var(--lime)}
+.dc .bar{height:8px;border-radius:4px;background:#3a2c5c;margin:8px 0}.dc .bar i{display:block;height:100%;border-radius:4px;background:var(--lime)}
+.inv{position:absolute;right:0;top:70px;width:280px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 24px 50px rgba(31,18,53,.2);animation:fl 6s ease-in-out -3s infinite}
+.inv .t{display:flex;justify-content:space-between;border-bottom:1px solid #eee;padding-bottom:12px;margin-bottom:10px;font-size:12px;color:var(--mut)}.inv .t b{font:500 22px var(--hd);color:var(--ink)}
+.inv .r{display:flex;justify-content:space-between;font-size:13px;color:var(--mut);padding:4px 0}.inv .tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #eee;margin:8px 0 14px;padding-top:12px}.inv .tot b{font:500 26px var(--hd)}.inv .btn{width:100%}
+.note{position:absolute;left:-6px;top:300px;background:var(--lime);padding:11px 16px;border-radius:6px;transform:rotate(-4deg);font-size:12px;box-shadow:0 8px 20px rgba(31,18,53,.15);z-index:2}.note b{display:block;font-family:var(--hd);font-size:14px}
+.cap{position:absolute;bottom:0;right:0;font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.strip{background:var(--vio);color:#fff;overflow:hidden;white-space:nowrap;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:13px 0}
+.strip div{display:inline-block;animation:mq 28s linear infinite}.strip span{margin:0 26px}.strip span::before{content:"";display:inline-block;width:6px;height:6px;background:var(--lime);margin-right:12px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;padding:44px 0 8px}.stats b{display:block;font:500 34px var(--hd);color:var(--vio)}.stats small{color:var(--mut)}
+a.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;min-height:210px;transition:transform .2s,box-shadow .2s,background .2s}
+a.card:hover,.pc:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(108,58,245,.18)}a.card:hover{background:var(--vio);color:#fff}a.card:hover p,a.card:hover .go{color:#efeaff}
+a.card .no2{font:500 12px var(--bd);color:var(--vio);margin-bottom:34px}a.card:hover .no2{color:var(--lime)}a.card p{margin-bottom:auto}.go{margin-top:18px;font-weight:500;font-size:14px;color:var(--vio)}
+.pc{display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}.pc.hot{border:2px solid var(--vio)}.pc .btn{margin-top:auto}
+article{transition:transform .2s,box-shadow .2s}article:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,18,53,.1)}article .btn{margin-top:14px}
+details{transition:border-color .2s}details:hover,details[open]{border-color:var(--vio)}summary{list-style:none;display:flex;justify-content:space-between}summary::after{content:"+";color:var(--vio);font-size:22px;line-height:1}details[open] summary::after{content:"–"}
+.band{background:var(--ink);color:#fff;border-radius:18px;padding:48px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 72px}.band h2{max-width:560px;margin:0}.band h2 span{color:var(--lime)}
+.sticky{display:none}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media(max-width:860px){.hg{grid-template-columns:1fr}.vis{height:400px}.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6}.sticky .btn{width:100%;box-shadow:0 10px 30px rgba(31,18,53,.35)}body{padding-bottom:80px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.hero{background:var(--lav);padding:64px 0 72px}
+.hero h1{font-size:clamp(40px,6.5vw,76px);max-width:820px}.hero h1 span{color:var(--vio)}
+.lead{font-size:18px;max-width:640px;color:var(--mut);margin:22px 0 28px}
+section{padding:72px 0}h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px}
+.k{font:600 12px var(--bd);letter-spacing:.05em;text-transform:uppercase;color:var(--vio);margin-bottom:10px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:28px}
+.card{background:var(--lav);border-radius:10px;padding:22px}.card h3{font-size:20px;margin-bottom:8px}.card p{color:var(--mut);font-size:14px;margin:0}
+.card.w2{background:#fff;border:1px solid #e1dcef}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:8px 24px;background:#fff;border:1px solid #e1dcef;border-radius:10px;padding:22px;margin:24px 0 0}
+dt{font-weight:600}dd{margin:0}
+.price{font:500 40px var(--hd)}.price small{font:400 14px var(--bd);color:var(--mut)}
+.no{background:var(--ink);color:#fff}.no .card{background:#2d2148}.no .card p,.no .k{color:#cfc6ee}
+details{background:#fff;border:1px solid #e1dcef;border-radius:8px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:600;cursor:pointer}details p{margin:10px 0 0;color:var(--mut)}
+article{background:#fff;border:1px solid #e1dcef;border-radius:10px;padding:22px}article h3{font-size:20px;margin-bottom:10px}
+ol{margin:0;padding-left:20px}li{margin-bottom:6px}
+.rev{font-size:12px;color:var(--mut);margin-top:12px}
+footer{background:var(--ink);color:#cfc6ee;padding:40px 0;font-size:14px}footer a{color:#fff}
+dialog{border:0;border-radius:14px;padding:28px;width:min(420px,92vw)}dialog::backdrop{background:rgba(31,18,53,.55)}
+label{display:block;font-weight:500;font-size:14px;margin:14px 0 6px}
+input,select{width:100%;padding:12px;border:1px solid #cfc8e6;border-radius:6px;font:16px var(--bd)}
+.msg{font-size:13px;min-height:20px;color:#b3261e;margin-top:8px}.ok{color:#1a6b3a}
+.x{float:right;background:none;border:0;font-size:22px;cursor:pointer}
+@media(max-width:640px){nav a.h{display:none}dl.facts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<div class="demo" role="note"><b>Competition demonstration.</b> LedgerLoop is a fictional business created for the PS 04 “Get Cited” challenge. It is not a real company or product, and nothing here can be bought or used for real invoicing.</div>
+<header><div class="w"><a class="logo" href="#top">Ledger<i>Loop</i></a>
+<nav aria-label="Main"><a class="h" href="#features">Features</a><a class="h" href="#pricing">Pricing</a><a class="h" href="#fit">Is it right for you?</a><a class="h" href="#help">How-to</a><a class="h" href="#faq">FAQ</a>
+<span id="authNav"><a href="#" data-auth="in">Sign in</a> <button class="btn" data-auth="in">Get started</button></span></nav></div></header>
+<main id="top">
+<div class="hero"><div class="w"><div class="hg"><div>
+<p class="k">Invoicing and payment tracking · India</p>
+<h1>GST invoices and UPI payment links for <span>freelancers in India.</span></h1>
+<p class="lead">LedgerLoop is invoicing and payment-tracking software for freelancers and very small agencies in India. Send a GST-compliant invoice with a UPI payment link, let automatic reminders chase it, and track your expenses alongside. Sign in with just your mobile number.</p>
+<div class="cta"><button class="btn" data-auth="in">Start free with your mobile number</button><a class="btn s" href="#pricing">See the three plans</a><a class="btn l" href="#help">How it works</a></div></div>
+<div class="vis"><div class="ring"></div>
+<div class="dc"><b style="font:600 17px var(--hd)">LedgerLoop</b><small style="margin-top:16px">Outstanding · sample</small><span class="n">₹34,800</span><small>Paid this month</small><div class="bar"><i style="width:72%"></i></div><small>Reminders sent automatically</small></div>
+<div class="inv"><div class="t"><span>INVOICE LL-024<br><b>₹21,240</b></span><span>GST 18%</span></div><div class="r"><span>Brand design</span><span>₹18,000</span></div><div class="r"><span>GST</span><span>₹3,240</span></div><div class="tot"><span style="font-size:12px;color:var(--mut)">Total due</span><b>₹21,240</b></div><button class="btn" data-qr style="width:100%">Pay with UPI</button></div>
+<div class="note"><b>A nudge, not a to-do.</b>Automatic payment reminders</div><div class="cap">Illustrative · sample data</div></div></div>
+<dl class="facts rv" aria-label="LedgerLoop at a glance">
+<dt>What it is</dt><dd>Invoicing and payment-tracking software</dd><dt>Who it is for</dt><dd>Freelancers and very small agencies in India</dd>
+<dt>Features</dt><dd>GST-compliant invoices, UPI payment links, automatic payment reminders, expense tracking</dd>
+<dt>Not offered</dt><dd>Multi-currency invoicing, payroll</dd><dt>Plans</dt><dd>Free, ₹399 per month, ₹899 per month</dd>
+<dt>Sign-in</dt><dd>Mobile number with a one-time code (WhatsApp, SMS fallback). No password.</dd>
+<dt>Company</dt><dd>Hyderabad · launched 2023 · four-person team · about 2,600 paying customers</dd></dl>
+</div></div>
+<div class="strip" aria-hidden="true"><div><span>GST-compliant invoices</span><span>UPI payment links</span><span>Automatic reminders</span><span>Expense tracking</span><span>Sign in with your mobile number</span><span>GST-compliant invoices</span><span>UPI payment links</span><span>Automatic reminders</span><span>Expense tracking</span><span>Sign in with your mobile number</span></div></div>
+<div class="w stats rv"><div><b>2023</b><small>Launched</small></div><div><b>Hyderabad</b><small>Home base</small></div><div><b>4</b><small>People on the team</small></div><div><b>≈2,600</b><small>Paying customers</small></div></div>
+
+<section id="features"><div class="w"><p class="k">Features</p><h2>Four tools. Nothing you don’t need.</h2>
+<div class="grid">
+<a class="card rv" href="#how-invoice"><span class="no2">01</span><h3>GST-compliant invoices</h3><p>Turn finished work into a GST-compliant invoice in rupees.</p><span class="go">See how →</span></a>
+<a class="card rv" href="#how-upi"><span class="no2">02</span><h3>UPI payment links</h3><p>Every invoice can carry a UPI payment link so clients pay in the way they already do. LedgerLoop does support UPI payment links.</p><span class="go">See how →</span></a>
+<a class="card rv" href="#how-remind"><span class="no2">03</span><h3>Automatic payment reminders</h3><p>Reminders go out for unpaid invoices so you don’t have to chase by hand.</p><span class="go">See how →</span></a>
+<a class="card rv" href="#how-expense"><span class="no2">04</span><h3>Expense tracking</h3><p>Record business expenses next to the invoices and payments they relate to.</p><span class="go">See how →</span></a>
+</div></div></section>
+
+<section id="pricing" style="background:var(--lav)"><div class="w"><p class="k">Pricing · current as of October 2026</p><h2>Exactly three plans.</h2>
+<p>LedgerLoop has a free plan, a ₹399 per month plan and a ₹899 per month plan. If you see any other LedgerLoop plan or price quoted elsewhere, it is out of date. All amounts are in Indian rupees.</p>
+<div class="grid">
+<div class="card w2 pc rv hot"><h3>Free</h3><div class="price">₹0</div><p>Start with a free plan. Limited to one free account per verified mobile number.</p><button class="btn" data-auth="in">Start free</button></div>
+<div class="card w2 pc rv"><h3>Standard</h3><div class="price">₹399 <small>per month</small></div><p>Monthly paid plan.</p><button class="btn s" data-auth="in">Choose ₹399 plan</button></div>
+<div class="card w2 pc rv"><h3>Plus</h3><div class="price">₹899 <small>per month</small></div><p>Higher monthly paid plan.</p><button class="btn s" data-auth="in">Choose ₹899 plan</button></div></div>
+<p class="rev">Per-plan limits are shown in the app when you choose a plan; this page does not list limits it cannot guarantee. Last reviewed: 17 October 2026.</p></div></section>
+
+<section id="fit"><div class="w"><p class="k">Honest fit guide</p><h2>When LedgerLoop is the right choice, and when it isn’t.</h2>
+<div class="grid">
+<div class="card rv"><h3>Choose LedgerLoop if you…</h3><p>Invoice clients in India in rupees, need GST-compliant invoices, want clients to pay by UPI link, want automatic reminders, and want expense tracking in the same place.</p></div>
+<div class="card rv"><h3>Choose something else if you…</h3><p>Need to invoice in foreign currencies (no multi-currency support) or need to run payroll for employees (no payroll). LedgerLoop focuses on invoicing and payment tracking.</p></div>
+<div class="card rv"><h3>Why mobile sign-in?</h3><p>No password to forget or reset, and each free account is tied to a verified real phone number rather than a disposable email.</p></div></div></div></section>
+
+<section id="help" style="background:var(--lav)"><div class="w"><p class="k">How-to guides</p><h2>Step-by-step, written for the current product.</h2>
+<div class="grid">
+<article class="rv" id="how-invoice"><h3>How to create a GST-compliant invoice</h3><ol><li>Sign in with your mobile number.</li><li>Choose New invoice and pick or add a client.</li><li>Add the work, amount and GST rate.</li><li>Review the total and save or send.</li></ol><button class="btn s" data-auth="in">Start an invoice</button></article>
+<article class="rv" id="how-upi"><h3>How to share a UPI payment link</h3><ol><li>Open the invoice.</li><li>Turn on the UPI payment link.</li><li>Send the invoice; your client pays through the link.</li></ol><button class="btn" data-qr>See a sample UPI pay screen</button><button class="btn s" data-auth="in">Try a UPI link</button></article>
+<article class="rv" id="how-remind"><h3>How to set automatic payment reminders</h3><ol><li>Open an unpaid invoice or your settings.</li><li>Turn on automatic reminders.</li><li>LedgerLoop sends reminders until the invoice is paid.</li></ol><button class="btn s" data-auth="in">Set reminders</button></article>
+<article class="rv" id="how-expense"><h3>How to track an expense</h3><ol><li>Go to Expenses.</li><li>Add the amount, category and date.</li><li>View it alongside your invoices and payments.</li></ol><button class="btn s" data-auth="in">Track an expense</button></article>
+<article class="rv" id="how-signin"><h3>How to sign in (no password)</h3><ol><li>Select Sign in and enter your 10-digit mobile number.</li><li>Enter the 6-digit code sent on WhatsApp (SMS if WhatsApp fails).</li><li>You are signed in. Next time, repeat with a new code.</li></ol><button class="btn" data-auth="in">Try it now</button></article></div>
+<p class="rev">If a step you were given elsewhere differs from these, follow this page. Last reviewed: 17 October 2026. LedgerLoop cannot invoice in other currencies or run payroll, so no guide for those exists.</p></div></section>
+
+<section id="faq"><div class="w"><p class="k">FAQ</p><h2>Direct answers.</h2>
+<details open><summary>What does LedgerLoop cost?</summary><p>Exactly three plans: free, ₹399 per month and ₹899 per month. No other plan or price is current.</p></details>
+<details open><summary>Does LedgerLoop support multi-currency invoicing?</summary><p>No. Invoices are in Indian rupees only.</p></details>
+<details open><summary>Does LedgerLoop have UPI payment links?</summary><p>Yes. UPI payment links are a core feature.</p></details>
+<details open><summary>Does LedgerLoop do payroll?</summary><p>No.</p></details>
+<details open><summary>How do I sign in to LedgerLoop?</summary><p>With your mobile number. We send a 6-digit one-time code by WhatsApp, falling back to SMS. There is no password and no password reset.</p></details>
+<details open><summary>Where is LedgerLoop based and who is it for?</summary><p>Hyderabad. Launched in 2023, four-person team, built for freelancers and very small agencies in India.</p></details></div></section>
+<div class="w"><div class="band rv"><h2>Send your first invoice <span>in the loop.</span></h2><div class="cta"><button class="btn l" data-auth="in">Start free with your mobile number</button><a class="btn s" href="#faq">Read the FAQ</a></div></div></div>
+</main>
+<div class="sticky"><button class="btn l" data-auth="in">Start free with your mobile number</button></div>
+
+<footer><div class="w"><p><b style="color:#fff">LedgerLoop</b> · Hyderabad, India · since 2023</p>
+<p><b style="color:var(--lime)">Competition demonstration.</b> Fictional business made for PS 04 “Get Cited”, not a real company. Phone sign-in is powered by <a href="https://minimoth.dev">MiniMoth</a> (sandbox: no real messages are sent).</p>
+<p id="srcInfo" style="font-size:12px"></p>
+<p><a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">sitemap</a> · © 2026</p></div></footer>
+
+<dialog id="qd" aria-labelledby="qt"><button class="x" aria-label="Close" id="qx">×</button>
+<h2 id="qt" style="font-size:24px">Pay with UPI</h2><p style="color:var(--mut);font-size:14px">Sample invoice LL-024 · ₹21,240</p>
+<img src="data:image/png;base64,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" alt="Sample UPI QR code for the demo invoice" width="260" height="260" style="display:block;margin:12px auto;border:1px solid #e1dcef;border-radius:10px">
+<p style="text-align:center;font-weight:500">Scan to pay with any UPI app</p>
+<p class="msg" style="color:#b3261e">Competition demonstration only. Do not make a payment: LedgerLoop is a fictional business.</p></dialog>
+<dialog id="d" aria-labelledby="dt"><button class="x" aria-label="Close" id="dx">×</button>
+<h2 id="dt" style="font-size:26px">Sign in or start free</h2>
+<p style="color:var(--mut);font-size:14px">No password. We verify your mobile number with a one-time code.</p>
+<div id="s1"><label for="ph">Mobile number (India)</label><input id="ph" type="tel" inputmode="numeric" autocomplete="tel" placeholder="98765 43210"><button class="btn" id="send" style="width:100%;margin-top:14px">Send code</button></div>
+<div id="s2" hidden><label for="cd">6-digit code</label><input id="cd" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="••••••"><button class="btn" id="ver" style="width:100%;margin-top:14px">Verify</button><button class="btn s" id="back" style="width:100%;margin-top:8px">Use a different number</button></div>
+<div id="s3" hidden><p class="ok" id="welcome"></p><label for="hear">How did you find LedgerLoop? (optional)</label><select id="hear"><option value="">Prefer not to say</option><option>AI assistant</option><option>Search engine</option><option>Friend or colleague</option><option>Social media</option><option>Other</option></select><button class="btn l" id="done" style="width:100%;margin-top:14px">Continue</button></div>
+<p class="msg" id="msg" role="status" aria-live="polite"></p>
+<p style="font-size:12px;color:var(--mut)">Demo: sandbox key, no real account is created.</p></dialog>
+
+<script>
+// ---- MiniMoth via our own server (/api/otp/*): the API key stays server-side ----
+const $=i=>document.getElementById(i),S=(k,v)=>{try{v===undefined?v=localStorage.getItem(k):localStorage.setItem(k,v)}catch(e){}return v};
+async function mm(p,b){if(location.protocol==='file:')throw new Error('Open the site through the server (npm start), not as a local file.');
+ const r=await fetch('/api'+p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});
+ const j=await r.json().catch(()=>({}));if(!r.ok){const e=new Error(j.message||j.error||(r.status===404?'Server route missing. Run via node server.js':'Request failed'));e.code=j.code||j.error;throw e}return j}
+// ---- First-touch attribution: classify AI referrers & UTM ----
+(function(){if(S('ll_src'))return;const AI={'chatgpt.com':'ChatGPT','chat.openai.com':'ChatGPT','perplexity.ai':'Perplexity','gemini.google.com':'Gemini','claude.ai':'Claude','copilot.microsoft.com':'Copilot','you.com':'You.com'};
+ const q=new URLSearchParams(location.search);let h='';try{h=new URL(document.referrer).hostname.replace(/^www\./,'')}catch(e){}
+ let src=q.get('utm_source')||(AI[h]?'ai:'+AI[h]:/google|bing|duckduckgo/.test(h)?'search:'+h:h?'referral:'+h:'direct');
+ if(AI[h]&&!/^ai:/.test(src))src='ai:'+AI[h];S('ll_src',JSON.stringify({src,t:Date.now(),path:location.pathname}))})();
+try{$('srcInfo').textContent='Visit source (first-touch, demo analytics): '+JSON.parse(S('ll_src')).src}catch(e){}
+// ---- Auth UI ----
+const d=$('d'),msg=(t,ok)=>{$('msg').textContent=t||'';$('msg').className='msg'+(ok?' ok':'')};
+const step=n=>['s1','s2','s3'].forEach((x,i)=>$(x).hidden=i!==n-1);
+const norm=v=>{v=v.replace(/[\s\-()]/g,'');if(/^\+91[6-9]\d{9}$/.test(v))return v;if(/^91[6-9]\d{9}$/.test(v))return'+'+v;if(/^[6-9]\d{9}$/.test(v))return'+91'+v;return null};
+let phone='',sess=null;
+function paint(){let s=null;try{s=JSON.parse(sessionStorage.getItem('ll_sess'))}catch(e){}sess=s;
+ $('authNav').innerHTML=s?'<span style="font-size:13px">Signed in '+s.mask+'</span> <button class="btn s" id="out">Sign out</button>':'<a href="#" data-auth="in">Sign in</a> <button class="btn" data-auth="in">Get started</button>';
+ if(s)$('out').onclick=()=>{sessionStorage.removeItem('ll_sess');paint()}}
+document.addEventListener('click',e=>{if(e.target.closest('[data-auth]')){e.preventDefault();msg('');step(1);d.showModal();$('ph').focus()}});
+$('dx').onclick=()=>d.close();
+document.addEventListener('click',e=>{if(e.target.closest('[data-qr]'))$('qd').showModal()});$('qx').onclick=()=>$('qd').close();$('qd').addEventListener('click',e=>{if(e.target===$('qd'))$('qd').close()});
+$('send').onclick=async()=>{const p=norm($('ph').value);if(!p)return msg('Enter a valid 10-digit Indian mobile number.');
+ $('send').disabled=true;msg('Sending…',true);try{await mm('/otp/send',{phone:p});phone=p;step(2);msg('Code sent by WhatsApp (SMS if that fails). Sandbox: no real message is delivered.',true);$('cd').focus()}
+ catch(e){msg(e.code==='RATE_LIMITED'||/rate/i.test(e.message)?'Too many attempts. Please wait a few minutes.':'Could not send the code: '+e.message)}$('send').disabled=false};
+$('back').onclick=()=>{step(1);msg('')};
+$('ver').onclick=async()=>{const c=$('cd').value.trim();if(!/^\d{6}$/.test(c))return msg('Enter the 6-digit code.');
+ $('ver').disabled=true;try{const r=await mm('/otp/verify',{phone,code:c});const id=r.identity_id||phone,mask='•••••'+phone.slice(-4);
+  sessionStorage.setItem('ll_sess',JSON.stringify({at:r.access_token,rt:r.refresh_token,id,mask,exp:r.expires_at}));
+  let acc={};try{acc=JSON.parse(S('ll_acc')||'{}')}catch(e){}
+  const again=!!acc[id];if(!again){acc[id]={created:Date.now(),source:JSON.parse(S('ll_src')||'{}').src||'direct'};S('ll_acc',JSON.stringify(acc))}
+  $('welcome').textContent=again?'Welcome back. This number already has a free account, so no duplicate was created.':'Number verified. Your free demo account is ready.';
+  $('hear').parentElement.querySelector('label').hidden=again;$('hear').hidden=again;
+  step(3);msg('');paint()}
+ catch(e){msg(e.code==='INVALID_OTP'?'That code is incorrect. Try again.':e.code==='OTP_NOT_FOUND'?'Code expired. Request a new one.':'Could not verify: '+e.message)}$('ver').disabled=false};
+$('done').onclick=()=>{const v=$('hear').value;if(v&&sess){let a={};try{a=JSON.parse(S('ll_acc')||'{}')}catch(e){}if(a[sess.id]){a[sess.id].self=v;S('ll_acc',JSON.stringify(a))}}d.close()};
+paint();
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# LedgerLoop
+> Fictional business made for the PS 04 "Get Cited" competition demonstration. Not a real company.
+
+LedgerLoop is invoicing and payment-tracking software for freelancers and very small agencies in India. Based in Hyderabad, launched 2023, four staff, about 2,600 paying customers.
+
+## Facts (ground truth)
+- Features: GST-compliant invoices, UPI payment links (supported), automatic payment reminders, expense tracking.
+- Not offered: multi-currency invoicing, payroll. Invoices are in INR only.
+- Pricing (current): free plan, ₹399 per month, ₹899 per month. No other plan exists.
+- Sign-in: mobile number + one-time code (WhatsApp, SMS fallback). No password.
+- Last reviewed: 2026-10-17
+
+## Pages
+- [Home, features, pricing, fit guide, how-to guides, FAQ](https://ledgerloop.example/)
