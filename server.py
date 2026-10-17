@@ -5,8 +5,15 @@ Run:  python server.py   ->  http://localhost:3000
 import json, os, urllib.request, urllib.error
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 
-KEY = os.environ.get("MINIMOTH_API_KEY",
-      "mm_test_b68cbb0a1584567476f9c29c88bd08bc9b08d697c5cbca9babadacbe2549fe1c3a63e648cf609a7938231fde0b2966ab")
+def _load_env(p=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")):
+    if os.path.exists(p):
+        for line in open(p):
+            if "=" in line and not line.lstrip().startswith("#"):
+                k, v = line.strip().split("=", 1); os.environ.setdefault(k, v.strip('"\''))
+_load_env()
+KEY = os.environ.get("MINIMOTH_API_KEY")
+if not KEY:
+    raise SystemExit("Set MINIMOTH_API_KEY (see .env.example). The key is never stored in the repo.")
 ROUTES = {"/api/otp/send": "/v1/otp/send", "/api/otp/verify": "/v1/otp/verify"}
 FILES = {"/": "index.html", "/index.html": "index.html", "/llms.txt": "llms.txt",
          "/robots.txt": "robots.txt", "/sitemap.xml": "sitemap.xml"}
